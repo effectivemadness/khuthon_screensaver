@@ -56,6 +56,8 @@ async function setupCamera() {
 async function AWS_req(img_byte){
   let element = document.getElementById('method');
   console.log(element.value)
+  let collection = document.getElementById('collection');
+
   var rekognition = new AWS.Rekognition();
   var params = {
     CollectionId: "6jj2", 
@@ -66,10 +68,10 @@ async function AWS_req(img_byte){
     MaxFaces: 5
    };
    post_data = {
-    "result": false,
     "type" : element.value,
     "landing": "false",
-    "image":img_byte
+    "image":img_byte,
+    "collection" :collection.value
   }
   console.log(img_byte)
   redirectPost("/use",post_data)

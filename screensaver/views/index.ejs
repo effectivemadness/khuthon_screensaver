@@ -38,10 +38,10 @@
                 </header>
                 
                 <footer class="align-center">
-                  <form action=/register method="post">
-                    <input type="file" id="image_path" name="image" accept="image/png, image/jpeg" class="button alt">
-                    
-                    <input type="text" id="image_id" name="text" value="사진 이름""><input type="submit" value="등록" class="button alt" onclick="register_alert()">
+                  <form action=/register method="post" enctype="multipart/form-data">
+                    <input type="file" id="img" name="img" accept="image/png, image/jpeg" class="button alt">
+                    <input type='hidden' name="collection" id='collection' value="<%= collection %>" >
+                    <input type="text" id="image_id" name="text" value="사진 이름""><input type="submit" value="등록" class="button alt"">
                   </form>
                 </footer>
               </div>
@@ -63,7 +63,7 @@
                     <input type="hidden" name="landing" id="landing" value="true" />
                     <label for="type">Input Password:</label>
                     <input type='password' name='type' id='type'/>
-                    
+                    <input type='hidden' name="collection" id='collection' value="<%= collection %>" >
                     <!-- <select name="type" id="type"  class="button alt">
                       <option value="Desktop">바탕화면</option>
                       <option value="Logout">로그아웃</option>
@@ -85,6 +85,16 @@
 			<script src="javascripts/jquery.scrollex.min.js"></script>
 			<script src="javascripts/skel.min.js"></script>
 			<script src="javascripts/util.js"></script>
-			<script src="javascripts/main.js"></script>
+      <script src="javascripts/main.js"></script>
+      <script type="text/javascript">
+        var error = '<%= error %>';          
+        
+        if(error!='') 
+        {  
+          alert(error);
+        }
+        
+        
+        </script>
   </body>
 </html>

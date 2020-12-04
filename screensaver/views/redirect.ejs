@@ -1,0 +1,30 @@
+<body>
+  
+</body>
+<script type="text/javascript">
+    var error = '<%= error %>';          
+    
+    if(error!='') 
+    {  
+      alert(error);
+    }
+    function redirectPost(url, data) {
+  var form = document.createElement('form');
+  document.body.appendChild(form);
+  form.method = 'post';
+  form.action = url;
+  for (var name in data) {
+      var input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = name;
+      input.value = data[name];
+      form.appendChild(input);
+  }
+  form.submit();
+}
+post_data = {
+  "collection":'<%= collection %>'
+}
+    // window.location.href='/'
+    redirectPost('/',post_data)
+    </script>

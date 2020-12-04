@@ -11,10 +11,11 @@ const { exec } = require("child_process");
 router.post("/", function (req, res, next) {
   console.log(req.body)
   if (req.body.landing == "true") {
-    res.render('use', { method: req.body.type })
+    res.render('use', { method: req.body.type,collection:req.body.collection })
   }
   else {
     image = req.body.image
+    console.log(req.body.collection)
     // console.log(image)
     //   var img_arr = req.body.image.split(',').map(function(item) {
     //     return parseInt(item, 10);
@@ -33,7 +34,7 @@ router.post("/", function (req, res, next) {
     }
     // console.log(imageBytes)
     var params = {
-      CollectionId: "6jj2",
+      CollectionId: req.body.collection,
       FaceMatchThreshold: 95,
       Image: {
         Bytes: imageBytes
@@ -46,7 +47,7 @@ router.post("/", function (req, res, next) {
       }
       else {
         if (data.FaceMatches.length>0){
-          res.redirect("/");
+          res.render("redirect", {error:"Recognized!",collection: req.body.collection });
         }
         else{
           // todo 잠금 페이지로 이동.
