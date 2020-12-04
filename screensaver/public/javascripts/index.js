@@ -65,33 +65,45 @@ async function AWS_req(img_byte){
     }, 
     MaxFaces: 5
    };
-   rekognition.searchFacesByImage(params, function(err, data){
-    if (err) {
-      console.log(err, err.stack); // an error occurred
-      alert("AWS Not configured. Check /pubilc/javascripts/aws_setup.js");
-      window.location.href = '/';
-    }
+   post_data = {
+    "result": false,
+    "type" : element.value,
+    "landing": "false",
+    "image":img_byte
+  }
+  console.log(img_byte)
+  redirectPost("/use",post_data)
+  //  rekognition.searchFacesByImage(params, function(err, data){
+  //   if (err) {
+  //     console.log(err, err.stack); // an error occurred
+  //     alert("AWS Not configured. Check /pubilc/javascripts/aws_setup.js");
+  //     // window.location.href = '/';
+  //   }
       
-    else     console.log(data);           // successful response
-    if (data.FaceMatches.length>0){
-      post_data = {
-        "result": true,
-        "type" : element.value,
-        "landing": "false"
-      }
-    }
-    else{
-      post_data = {
-        "result": false,
-        "type" : element.value,
-        "landing": "false"
-      }
-      redirectPost("/use",post_data)
-    }
+  //   else     console.log(data);           // successful response
+  //   if (data.FaceMatches.length>0){
+  //     post_data = {
+  //       "result": true,
+  //       "type" : element.value,
+  //       "landing": "false",
+  //       "image":img_byte
+  //     }
+  //     // redirectPost("/use",post_data)
+  //   }
+  //   else{
+  //     post_data = {
+  //       "result": false,
+  //       "type" : element.value,
+  //       "landing": "false",
+  //       "image":img_byte
+  //     }
+  //     console.log('me!')
+  //     // redirectPost("/use",post_data)
+  //   }
 
     
-    }
-   )
+  //   }
+  //  )
    
 } 
 
@@ -157,7 +169,7 @@ function onClick(){
     ua[i] = enc_data.charCodeAt(i);
   }
   // console.log(ua)
-  AWS_req(ua)
+  AWS_req(dataURL)
 
 }
 const setupPage = async () => {

@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "@tensorflow-models/blazeface": "0.0.5",
+    "atob": "^2.1.2",
     "aws-sdk": "^2.791.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
