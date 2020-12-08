@@ -10,9 +10,7 @@
 # Built With
 - [Nodejs v14.15.1](https://nodejs.org/ko/)
 - [Express](https://expressjs.com/ko/)
-- [Python3](https://www.python.org/downloads/)
-- [YOLOv4](https://github.com/Tianxiaomo/pytorch-YOLOv4)
-- [Darknet](https://github.com/pjreddie/darknet)
+- [tensorflow.js](https://www.tensorflow.org/js?hl=ko)
 - [Amazon Rekognition](https://aws.amazon.com/ko/free/machine-learning/?trk=ps_a134p000006gGh6AAE&trkCampaign=acq_paid_search_brand&sc_channel=PS&sc_campaign=acquisition_KR&sc_publisher=Google&sc_category=Machine%20Learning&sc_country=KR&sc_geo=APAC&sc_outcome=acq&sc_detail=aws%20facial%20recognition&sc_content=Facial%20Recognition_e&sc_matchtype=e&sc_segment=477202630056&sc_medium=ACQ-P|PS-GO|Brand|Desktop|SU|Machine%20Learning|Solution|KR|EN|Text&s_kwcid=AL!4422!3!477202630056!e!!g!!aws%20facial%20recognition&ef_id=Cj0KCQiAzZL-BRDnARIsAPCJs72Uu_Iat-5C20ve4ITu4seo-Z4DXXMvSZYgcbpgO3GYG1c6ayI0ZdUaAnLSEALw_wcB:G:s&s_kwcid=AL!4422!3!477202630056!e!!g!!aws%20facial%20recognition)
 
 ## Run screen
