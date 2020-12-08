@@ -52,7 +52,7 @@ limitations under the License.
     <canvas id="output"></canvas>
     <div id="description">
       <div id="description-title">Face Detecting...</div>
-      
+      <input type="button" id="close_button" onclick="location.href='/';" value="종료" />
     </div>
     <video id="video" playsinline style="
       -webkit-transform: scaleX(-1);
@@ -63,7 +63,6 @@ limitations under the License.
       ">
     </video>
   </div>
-  <input type="button" id="AWS_button" onclick="onClick();" value="버튼1" />
   <form>
     <input type="hidden" id="method" name="method" value=<%= method %> />
     <input type="hidden" id="collection" name="collection" value=<%= collection %> />
