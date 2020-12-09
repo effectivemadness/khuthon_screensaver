@@ -29,11 +29,16 @@
 ```
 git clone http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver.git
 ```
-2. 폴더 이동
+2. 자료 대체
 ``` 
-cd screensaver_1
+screensaver_1 use.js -> screensaver/routes/use.js
+screensaver_1 index.ejs -> screensaver/views/index.ejs
 ```
-3. Download
+3. 폴더 이동
+```
+cd screensaver
+```
+4. Download
 ```
 npm install
 ```
@@ -76,6 +81,7 @@ node bin/www
 4. 화면 전환 기능 (사용자 선택가능)
 	- 윈도우 잠금
 	- 바탕화면 이동
+	- 화면전환
 
 # Provided Function (Ver 2.0.0 - Web hosting environment)
 1. 사용자에게 웹 UI를 통한 편리성 제공
