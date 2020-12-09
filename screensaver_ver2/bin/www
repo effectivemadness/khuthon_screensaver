@@ -1,0 +1,124 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var app = require("../app");
+var debug = require("debug")("screensaver:server");
+var http = require("http");
+const fs = require("fs");
+const path = require("path");
+const HTTPS = require("https");
+const domain = "www.screensaver.ml";
+const sslport = 23023;
+
+try {
+  const option = {
+    ca: fs.readFileSync("/etc/letsencrypt/live/" + domain + "/fullchain.pem"),
+    key: fs
+      .readFileSync(
+        path.resolve(
+          process.cwd(),
+          "/etc/letsencrypt/live/" + domain + "/privkey.pem"
+        ),
+        "utf8"
+      )
+      .toString(),
+    cert: fs
+      .readFileSync(
+        path.resolve(
+          process.cwd(),
+          "/etc/letsencrypt/live/" + domain + "/cert.pem"
+        ),
+        "utf8"
+      )
+      .toString(),
+  };
+
+  HTTPS.createServer(option, app).listen(sslport, () => {
+    console.log(`[HTTPS] Server is started on port ${sslport}`);
+  });
+} catch (error) {
+  console.log(
+    "[HTTPS] HTTPS 오류가 발생하였습니다. HTTPS 서버는 실행되지 않습니다."
+  );
+  console.log(error);
+}
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+var port = normalizePort(process.env.PORT || "3000");
+app.set("port", port);
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port);
+server.on("error", onError);
+server.on("listening", onListening);
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+function onError(error) {
+  if (error.syscall !== "listen") {
+    throw error;
+  }
+
+  var bind = typeof port === "string" ? "Pipe " + port : "Port " + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case "EACCES":
+      console.error(bind + " requires elevated privileges");
+      process.exit(1);
+      break;
+    case "EADDRINUSE":
+      console.error(bind + " is already in use");
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
+  debug("Listening on " + bind);
+}
