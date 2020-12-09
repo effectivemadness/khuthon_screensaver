@@ -55,8 +55,7 @@ git clone http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver.git
 ``` 
 cd screensaver_2
 ```
-3. change https settings
-[bin/www](http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver/blob/master/screensaver/bin/www)
+3. change https settings in [bin/www](http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver/blob/master/screensaver/bin/www)
 ```
 const domain = "www.screensaver.ml";
 const sslport = 23023;
