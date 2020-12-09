@@ -6,6 +6,7 @@
 
 var app = require("../app");
 var debug = require("debug")("screensaver:server");
+var http = require("http");
 const fs = require("fs");
 const path = require("path");
 const HTTPS = require("https");
@@ -56,7 +57,7 @@ app.set("port", port);
  * Create HTTP server.
  */
 
-var server = HTTPS.createServer(app);
+var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
