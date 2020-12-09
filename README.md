@@ -47,9 +47,27 @@ localhost:3000
 ```
 
 # Building (Ver 2.0.0 - Web hosting environment)
-1. Web Page
+1. install
 ```
-https://www.screensaver.ml:23023/
+git clone http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver.git
+```
+2. 폴더 이동
+``` 
+cd screensaver_2
+```
+3. change https settings
+[bin/www](http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver/blob/master/screensaver/bin/www)
+```
+const domain = "www.screensaver.ml";
+const sslport = 23023;
+```
+4. Download dependencies
+```
+npm install
+```
+5. Run
+```
+node bin/www
 ```
 
 # Provided Function (Ver 1.0.0 - local environment)
