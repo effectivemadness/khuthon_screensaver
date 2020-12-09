@@ -53,7 +53,7 @@ git clone http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver.git
 ```
 2. 폴더 이동
 ``` 
-cd screensaver_2
+cd screensaver
 ```
 3. change https settings in [bin/www](http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver/blob/master/screensaver/bin/www)
 ```
