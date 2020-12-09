@@ -29,16 +29,11 @@
 ```
 git clone http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver.git
 ```
-2. 자료 대체
-``` 
-screensaver_1 use.js -> screensaver/routes/use.js
-screensaver_1 index.ejs -> screensaver/views/index.ejs
+2. 폴더 이동
 ```
-3. 폴더 이동
+cd screensaver_ver1
 ```
-cd screensaver
-```
-4. Download
+3. Download
 ```
 npm install
 ```
@@ -58,9 +53,9 @@ git clone http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver.git
 ```
 2. 폴더 이동
 ``` 
-cd screensaver
+cd screensaver_ver2
 ```
-3. change https settings in [bin/www](http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver/blob/master/screensaver/bin/www)
+3. change https settings in [bin/www](http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver/blob/master/screensaver_ver2/bin/www)
 ```
 const domain = "www.screensaver.ml";
 const sslport = 23023;
