@@ -37,13 +37,17 @@ cd screensaver_1
 ```
 npm install
 ```
-4. Run Executable
+4. Run
+```
+nodejs app.js
+```
+5. Web Page
 ```
 localhost:3000
 ```
 
 # Building (Ver 2.0.0 - Web hosting environment)
-1. Run Executable
+1. Web Page
 ```
 https://www.screensaver.ml:23023/
 ```
