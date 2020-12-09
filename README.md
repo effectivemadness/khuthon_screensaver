@@ -47,6 +47,10 @@ localhost:3000
 ```
 
 # Building (Ver 2.0.0 - Web hosting environment)
+0. aws connect
+```
+connect with ec2 instance
+```
 1. install
 ```
 git clone http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver.git
@@ -55,18 +59,17 @@ git clone http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver.git
 ``` 
 cd screensaver_ver2
 ```
-3. change https settings in [bin/www](http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver/blob/master/screensaver_ver2/bin/www)
-```
-const domain = "www.screensaver.ml";
-const sslport = 23023;
-```
-4. Download dependencies
+3. Download dependencies
 ```
 npm install
 ```
-5. Run
+4. Run
 ```
 node bin/www
+```
+5. Web Page
+```
+https://www.screensaver.ml:23023
 ```
 
 # Provided Function (Ver 1.0.0 - local environment)
