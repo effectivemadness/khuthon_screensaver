@@ -7,8 +7,7 @@
 이에따라 내부자에 대한 인가자, 비인가자 구분이 요구되며 내부 관계자에 대한 보안 필요성이 증대되었다.
  사용자에게 웹 UI를 제공하여 편리성을 제공하고 인가 사용자를 등록할 수 있으며 비인가 사용자 위험을 감지할 수 있다. 또한 사용자의 선택에 따라 다른 화면 전환 기능을 제공한다. Yolov4, darknet을 통해 사람 및 사람얼굴을 인식 후 값을 파이썬으로 전달받아 아마존 레코그니션의 학습시킨 컬렉션과 비교한다. 이러한 프로그램 실행, 인가 사용자 등록, 기능 설정 등과 같은 동작은 nodejs express를 통해 사용자에게 웹 UI가 제공되어 사용자는 편리하게 프로그램을 사용할 수 있다.
  
-# Built With 
-<span style="color:red"> (Ver 1.0.0 - local environment) </span>
+# Built With (Ver 1.0.0 - local environment)
 - [Nodejs v14.15.1](https://nodejs.org/ko/)
 - [Express](https://expressjs.com/ko/)
 - [Python3](https://www.python.org/downloads/)
