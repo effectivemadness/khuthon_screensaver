@@ -37,11 +37,12 @@ cd screensaver_ver1
 ```
 npm install
 ```
-4. Run
+4. Add AWS KEY to (config.json)[]from [AWS](https://aws.amazon.com/ko/premiumsupport/knowledge-center/create-access-key/)
+5. Run
 ```
 nodejs app.js
 ```
-5. Web Page
+6. Web Page
 ```
 localhost:3000
 ```
@@ -63,11 +64,12 @@ cd screensaver_ver2
 ```
 npm install
 ```
-4. Run
+4. Add AWS KEY to (config.json)[]from [AWS](https://aws.amazon.com/ko/premiumsupport/knowledge-center/create-access-key/)
+5. Run
 ```
 node bin/www
 ```
-5. Web Page
+6. Web Page
 ```
 https://www.screensaver.ml:23023
 ```
