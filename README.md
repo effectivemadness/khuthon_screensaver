@@ -24,7 +24,7 @@
 ## Run screen
 ![2](https://user-images.githubusercontent.com/57438644/100651286-95662400-3388-11eb-8f32-fc6bdf88282b.png)
 
-# Building (Ver 1.0.0 - local environment)
+# Build (Ver 1.0.0 - local environment)
 1. installing
 ```
 git clone http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver.git
@@ -46,8 +46,8 @@ nodejs app.js
 localhost:3000
 ```
 
-# Building (Ver 2.0.0 - Web hosting environment)
-0. aws connect
+# Build (Ver 2.0.0 - Web hosting environment)
+0. connect to server
 ```
 connect with ec2 instance
 ```
