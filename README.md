@@ -2,6 +2,9 @@
 ## AI 화면보호기 : 비인가 사용자로부터 PC 정보보호
 ![1](https://user-images.githubusercontent.com/57438644/100651272-926b3380-3388-11eb-870e-f0ccc900c999.png)
 
+# Domain address
+- ([https://www.screensaver.ml:23023/](https://www.screensaver.ml:23023/))
+
 # Project Purpose
  IBM 조사에 따르면 모든 정보 유출사고의 무려 60%는 내부자에 의해 발생되며 그 중 75%는 악의로 인한 것이라 한다. 
 이에따라 내부자에 대한 인가자, 비인가자 구분이 요구되며 내부 관계자에 대한 보안 필요성이 증대되었다.
