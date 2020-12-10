@@ -37,7 +37,7 @@ cd screensaver_ver1
 ```
 npm install
 ```
-4. Add AWS KEY to [config.json](http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver/blob/master/screensaver_ver2/config.json) from [AWS](https://aws.amazon.com/ko/premiumsupport/knowledge-center/create-access-key/)
+4. Add AWS KEY to [config.json](http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver/blob/master/screensaver_ver1/config.json) from [AWS](https://aws.amazon.com/ko/premiumsupport/knowledge-center/create-access-key/)
 5. Run
 ```
 nodejs app.js
