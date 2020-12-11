@@ -28,7 +28,7 @@
 ![2](https://user-images.githubusercontent.com/57438644/100651286-95662400-3388-11eb-8f32-fc6bdf88282b.png)
 
 # Build (Ver 1.0.0 - local environment)
-!!ONLY WORKS ON WINDOWS!!
+###!!WORKS ONLY ON WINDOWS!!
 1. installing
 ```
 git clone http://khuhub.khu.ac.kr/2015104201/OSS2020-2_Screensaver.git
